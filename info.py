@@ -2,8 +2,8 @@
 #This File will contain the information to be displayed in your portfolio
 
 #CHANGE BELOW
-profile_picture = "Images\profile.jpg"
-about_me = "I am Viktor, an inventor. I work as an assistant for Professor Heimerdinger at the Piltover Academy and as the co-founder of Hextech."
+profile_picture = "images/Netrapfp.png"
+about_me = "I'm NetraSomasundaram a freshman majoring in CompE at Georgia tech"
 
 
 #CHANGE BELOW (OPTIONAL)
@@ -12,67 +12,65 @@ github_image_url = "https://cdn-icons-png.flaticon.com/256/25/25231.png"
 email_image_url = "https://logowik.com/content/uploads/images/513_email.jpg"
 
 #CHANGE BELOW
-my_linkedin_url = "https://www.linkedin.com/in/spongebob-squarepants-44b857281/"
+my_linkedin_url = "https://www.linkedin.com/in/netra-somasundaram-4507b4241/"
 my_github_url = "https://github.com/spongebob-squarepants"
-my_email_address = "viktor2532@piltoveracademy.edu"
+my_email_address = "nsomasundaram7@gatech.edu"
 
 
 education_data ={
-    'Degree': 'Bachelor of Science in Mechanical Engineering',
-    'Institution': 'Piltover Academy',
-    'Location': 'Piltover',
-    'Graduation Date': '2009',
-    'GPA': '4.53',
-    'Relevant Coursework': 'Introduction to AI, CS 3600, Fall 2008'
+    'Degree': 'Bachelor of Engineering in Computer Engineering',
+    'Institution': 'Georgia Institute of Technology',
+    'Location': 'Atlanta, GA',
+    'Graduation Date': '2028',
+    'GPA': '4.0'
 }
 course_data = {
-    "code":["ME 3180", "COE 3001", "MATH 1564", "CS 1371"], 
-    "names":["Machine Design", "Mechanics of Deformable Bodies", "Linear Algebra with Abstract Vector Spaces", "Computing for Engineers"], 
-    "semester_taken":["3rd", "3rd", "2nd", "1st"],
-    "skills":["Synthesis of springs, joining and fastening methods, bearings; Design of assemblies", "Have you seen my body lately?", "Linear transformations & abstract vector spaces", "Analysis of algorithms; to design and construct programs for problem-solving"],
+    "code":["CS 1301", "ECE 1100", "MATH 1551", "CHEM 1330"], 
+    "names":["Intro to CS", "ECE", "Calculus 1", "Chemisry"], 
+    "semester_taken":["1st", "1st", "1st", "1st"],
+    "skills":["Coding", "Lab work", "trilungual", "vocalist"],
     }
 experience_data = {
-    "TA at Piltover Academy": (["- Organized study sessions on Piltover's history and technology",
-                                                                          "- Supervised labs on Piltover’s technology and Zaunite knowledge", "- Tutored students on runes and enforced academy policies"],"Images/piltoveracademy.jpg"),
-    "Assistant to Heimerdinger":(["- Prepared materials for Heimerdinger’s lectures",
-                                                           "- Helped test experimental devices, documenting results for further study","- Troubleshot and refined early prototypes based on Heimerdinger’s feedback"],"Images/heimerdingerandviktor.jpg"),
-    "Developer at Hextech":(["- Stabilized hex crystals"],"Images/hexcrystal.jpg")
+    "Hitters sportsplex worker": (["Coached tennis",
+                                                                          "- Increased Company Revenue by 200 dollars", "- Made coach Joel Proud"],"Images/tennis.jpeg"),
+    "UW lab intern":(["worked at the UW opthalmology and visual sciences research lab",
+                                                           "- Conducted routine experiments like: PCRs, electrolysis"],"Images/lab.jpeg"),
+    "IceCube UW analyisi":(["Interned at the UW physics department"],"Images/physics.jpg")
 
 }
 
 projects_data = {
-    "Hexgates" : "Created a portal that can send ships through lightspeed tunnels and bring them to another location",
-    "Hextech Core": "Created an adaptive rune matrix that can evolve and hopefully be applied to augment the physiology of organic matter"
+    "Raspberry Pi ECE robot": "Created a robot using a raspberry pi in the GT makerspace for ECE1100",
 }
 
 programming_data = {
-    "Body Manipulation": 40,
-    "Hex Crystal Understanding": 100,
-    "Hexcore Understanding": 20,
+    "Python": 90,
+    "Java": 60,
+    "C": 40,
 }
 
 #CHANGE BELOW (OPTIONAL)
 programming_icons = {
-    "Body Manipulation": "💪",
-    "Hex Crystal Understanding": "💎",
-    "Hexcore Understanding": "🔵",
+    "Python": "🐍",
+    "Java": "☕",
+    "C": "🔍",
 }
-spoken_icons = {"English": "🇺🇸",
-    "Noxan": "🏴"
+spoken_icons = {"French": "🇫🇷",
+    "English": "🇬🇧",
+    "Tamil":"🇸"
 }
 
 #CHANGE BELOW
 spoken_data = {
-    "English": " Fluent",
-    "Noxan": " Fluent"
+    "English": "Fluent",
+    "French": "novice",
+    "Tamil": "Fluent",
 }
+
 leadership_data = {
-    "Co-Founder of Hextech": (["- Employee of the Month", "- Most Likely to Lead a Rebellion", ],"Images/hextech.jpg"),
+    "Varstiy tennis captain": (["MVP of team"],"Images/leader.jpeg"),
 
 }
 activity_data={
-    "Hextech Champions": (["- Most Likely to lead a rebellion(yes, they voted me this too)",
-        "- Supplied a magical technology that fuses elemental and spirit magic to create artifacts that can be wielded by anyone, not just the people with an affinity for the arcane"]),
-    "Rio Research Club": ["- The mutation must survive", 
-            "- The mutation must survive", "- The mutation must survive"]
+    "Badminton Club Prez": (["Hosted tournaments for the school", " Played with the team"], "Images/badminton.jpeg"),
 }
