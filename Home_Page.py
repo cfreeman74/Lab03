@@ -21,10 +21,10 @@ st.subheader("Charisse Freeman, Netra Somasundaram")
 st.write("""
 Welcome to our Streamlit Web Development Lab03 app! You can navigate between the pages using the sidebar to the left. The following pages are:
 
-1. Netra's Profile: Description\n
+1. Netra's Profile: 
 2. Netra's Profile: Descripiton\n
-3. Victor's Profile: Profile for the Best Character in Arcane\n
-4. Jayce's Profile: Profile for the 'Best' Councilor in Arcane\n
+3. Victor's Profile: Online portfolio for the Best Character in Arcane\n
+4. Jayce's Profile: Online portfolio for the 'Best' Councilor in Arcane\n
 
 
 """)
