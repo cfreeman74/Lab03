@@ -14,9 +14,10 @@ model = genai.GenerativeModel("gemini-1.5-flash")
 
 
 <form>
-    <input type="text" placeholder="Enter your question here:">
-    <button type="submit">-></button>
+<input type="text" placeholder="Enter your question here:">
+<button type="submit">-></button>
 </form>
+
 
 
 def taller():
