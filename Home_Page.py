@@ -24,8 +24,8 @@ Welcome to our Streamlit Web Development Lab03 app! You can navigate between the
 
 1. Netra's Profile: Online portfolio of Netra Somasundaram \n
 2. Jayce's Profile: Online portfolio for the 'Best' Councilor in Arcane\n
-3. Star Wars API: A Star Wars search tool that can find your Star Wars lookalike\n
-4. Gemini API: A Star Wars height competiton including an AI chatbot. 
+3. Star Wars Lookalike: A Star Wars search tool that can find your Star Wars lookalike\n
+4. Star Wars Height Competiton: A Star Wars height competiton including an AI chatbot. 
 
 """)
 
