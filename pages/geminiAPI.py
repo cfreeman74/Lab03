@@ -26,7 +26,7 @@ def taller():
         height1 = None
         height2 = None
         for id in range(1,83):
-            response.requests.get(f"{base_url}{id}")
+            response = requests.get(f"{base_url}{id}")
             data = response.json()
             if data["name"].lower() == character1.lower():
                 height1 = data["height"]
