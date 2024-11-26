@@ -110,11 +110,10 @@ history=[
 )
 
 # Create the Streamlit app
-
- st.set_page_config(page_title="Pokémon Battle Chat", layout="centered")
+st.set_page_config(page_title="Pokémon Battle Chat", layout="centered")
 
     # Page header
-    st.markdown(
+st.markdown(
         """
         <div style="text-align: center; font-size: 32px; font-weight: bold; margin-bottom: 20px;">
             Post-Game Press Conference
@@ -127,18 +126,18 @@ history=[
     )
 
     # Chat interface
-    user_input = st.text_input(
+user_input = st.text_input(
         "Enter your question here:",
         placeholder="Type your question...",
         label_visibility="hidden"
     )
 
-    if user_input:
+if user_input:
         # Get response from AI
-        response = chat.send_message(user_input)
+    response = chat.send_message(user_input)
 
         # Display chat history
-        st.markdown(
+    st.markdown(
             f"""
             <div style="margin: 20px 0; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
                 <b>Pokémon Trainer</b>: {user_input}
