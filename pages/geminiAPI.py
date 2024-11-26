@@ -43,7 +43,7 @@ def taller():
 
 
             elif int(height2) > int(height1):
-                result = f"{character2} is taller than {character2}!"
+                result = f"{character2} is taller than {character1}!"
                 st.success(result)
 
             elif int(height1) == int(height2):
