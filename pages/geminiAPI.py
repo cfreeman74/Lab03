@@ -96,5 +96,5 @@ def chatbot():
         # Display the chatbot's response
         print(f"Chatbot: {response.text}")
 
-st.write(chatbot)
+#st.write(chatbot)
 
