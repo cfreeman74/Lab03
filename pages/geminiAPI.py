@@ -79,7 +79,7 @@ if st.button("Find out who's taller ->"):
     
     # Initialize the model
 
-model = genai("gemini-1.5-flash")
+
 chat = model.start_chat(
 history=[
     {"role": "user", "parts": "Hello"},
