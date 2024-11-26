@@ -1,4 +1,28 @@
-form {
+.post-game-conference {
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  form {
     display: flex;
     align-items: center;
+  }
+  
+  input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
   }
