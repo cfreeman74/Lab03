@@ -5,8 +5,8 @@ import json
 import streamlit as st
 
 #key = st.secrets.get("key")
-#key = st.secrets["key"]
-st.write(st.secrets)
+key = st.secrets["key"]
+
 
 genai.configure(api_key=key)
 
