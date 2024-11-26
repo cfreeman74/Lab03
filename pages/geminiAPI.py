@@ -75,17 +75,26 @@ def chatbot():
 
     # st.title("Interactive Chatbot")
     # st.write("Start a conversation with the AI!")
-
+    
+    # Initialize the model
     model = genai.GenerativeModel("gemini-1.5-flash")
-    chat = model.start_chat(
-        history=[
-            {"role": "user", "parts": "Hello"},
-            {"role": "model", "parts": "Great to meet you. What would you like to know?"},
-        ]
-    )
-    response = chat.send_message("I have 2 dogs in my house.")
-    print(response.text)
-    response = chat.send_message("How many paws are in my house?")
-    print(response.text)
+
+    # Start a chat session
+    chat = model.start_chat(history=[])
+
+    print("Chatbot: Hello! How can I assist you today?")
+    while True:
+        # Get user input
+        user_input = input("You: ")
+        if user_input.lower() in ["exit", "quit"]:
+            print("Chatbot: Goodbye! Have a great day!")
+            break
+
+        # Send the user's message to the chatbot
+        response = chat.send_message(user_input)
+        
+        # Display the chatbot's response
+        print(f"Chatbot: {response.text}")
+
 st.write(chatbot)
 
