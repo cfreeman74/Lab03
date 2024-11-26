@@ -52,7 +52,7 @@ def storage(result):
     response = model.generate_content(prompt)
     st.write(response.text)
 
-st.header("Which Star Wars character is taller?")
+st.title("Which Star Wars character is taller?")
 st.write("Put in the characters of your chioice.")
 st.write("---")
 
@@ -89,7 +89,7 @@ history=[
 
 # Create the Streamlit app
 def main():
-    st.title("Star Wars Chatbot")
+    st.header("Star Wars Chatbot")
 
     user_input = st.text_input("Enter your message:")
 
