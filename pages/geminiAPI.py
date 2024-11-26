@@ -71,7 +71,8 @@ def chatbot(message):
             {"role": "model", "parts": "Great to meet you. What would you like to know?"},
         ]
     )
-    message = st.text_input(" ")
+    response = st.text_input("Enter something")
+    aiResponse = chat.send_message(model.generate_content(response))
     #response = chat.send_message("I have 2 dogs in my house.")
     st.write(response.text)
 
@@ -81,5 +82,5 @@ def chatbot(message):
     # Initialize the model
 
 
-st.write(chatbot())
+st.write(chatbot(message))
 
