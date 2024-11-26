@@ -11,19 +11,15 @@ key = st.secrets["key"]
 genai.configure(api_key=key)
 
 model = genai.GenerativeModel("gemini-1.5-flash")
-response = model.generate_content("Write a story about a magic backpack.")
-st.write(response.text)
+
 
 def taller():
 
-    st.header("Who's taller?")
-    st.write("Put in the characters of your chioice.")
-    st.write("---")
+    
 
 
 
-    character1 = st.text_input("Type in a starwars character")
-    character2 = st.text_input("Type in another starwars character")
+    
 
     if character1 and character2:
         base_url = "https://swapi.dev/api/people/"
@@ -55,6 +51,12 @@ def taller():
 
             else:
                 return "We can't tell :("
+st.header("Who's taller?")
+st.write("Put in the characters of your chioice.")
+st.write("---")
+
+character1 = st.text_input("Type in a starwars character")
+character2 = st.text_input("Type in another starwars character")
 
 if st.button("Enter something"):
     taller()
