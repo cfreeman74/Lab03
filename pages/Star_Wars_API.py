@@ -8,7 +8,7 @@ st.write("---")
 
 hairColor = st.text_input("What is your hair color? ")
 eyeColor = st.text_input("What is your eye color? ")
-gender = st.text_input("What is your gender? ")
+gender = st.text_input("What is your gender? \n")
 
 def features(hairColor, eyeColor, gender):
    #hairColor
