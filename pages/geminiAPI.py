@@ -110,7 +110,7 @@ history=[
 )
 
 # Create the Streamlit app
-st.set_page_config(page_title="Star Wars Chatbot", layout="centered")
+#st.set_page_config(page_title="Star Wars Chatbot", layout="centered")
 
     # Page header
 st.markdown(
