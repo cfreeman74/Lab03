@@ -3,9 +3,9 @@ import json
 def features():
     
 
-    hairColor = input("What your hair color? ")
-    eyeColor = input("What is your eye color? ")
-    gender = input("What is your gender? ")
+    hairColor = st.text_input("What your hair color? ")
+    eyeColor = st.text_input("What is your eye color? ")
+    gender = st.text_input("What is your gender? ")
    
     
 
