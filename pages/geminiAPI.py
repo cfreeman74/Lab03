@@ -80,9 +80,19 @@ if st.button("Find out who's taller ->"):
     # Initialize the model
 
 st.markdown("""
-<div class="Star-Wars-Chatbot">
-  <h2>Star Wars Chatbot:</h2>
-  <p>Get answers from a Star Wars expert. Ask them all your questiosn!</p>
+<div class="post-game-conference">
+  <h2>Post-Game Press Conference:</h2>
+  <p>The local Pokémon master was in attendance for the battle. Ask him any questions about the fight!</p>
+
+  <div class="question">
+    <img src="pokemon_trainer.png" alt="Pokémon Trainer">
+    <p>What Pokémon type is Fezandipiti?</p>
+  </div>
+
+  <div class="answer">
+    <img src="pokemon_trainer.png" alt="Pokémon Trainer">
+    <p>Fezandipiti is a Fairy and Poison-type Pokémon.</p>
+  </div>
 
   <form>
     <input type="text" placeholder="Enter your question here:">
