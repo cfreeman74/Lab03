@@ -13,20 +13,6 @@ genai.configure(api_key=key)
 model = genai.GenerativeModel("gemini-1.5-flash")
 
 
-st.markdown("""
-<div class="post-game-conference">
-  <h2>Post-Game Press Conference:</h2>
-  <p>The local Pokémon master was in attendance for the battle. Ask him any questions about the fight!</p>
-
-  <form>
-    <input type="text" placeholder="Enter your question here:">
-    <button type="submit">▶</button>
-  </form>
-</div>
-""", unsafe_allow_html=True)
-
-
-
 def taller():
     if character1 and character2:
         base_url = "https://swapi.dev/api/people/"
@@ -92,6 +78,18 @@ if st.button("Find out who's taller ->"):
     # st.write("Start a conversation with the AI!")
     
     # Initialize the model
+
+st.markdown("""
+<div class="Star-Wars-Chatbot">
+  <h2>Star Wars Chatbot:</h2>
+  <p>The local Pokémon master was in attendance for the battle. Ask him any questions about the fight!</p>
+
+  <form>
+    <input type="text" placeholder="Enter your question here:">
+    <button type="submit">▶</button>
+  </form>
+</div>
+""", unsafe_allow_html=True)
 
 
 chat = model.start_chat(
