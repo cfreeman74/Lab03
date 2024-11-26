@@ -38,19 +38,22 @@ def taller():
         if height1 and height2:
 
             if int(height1) > int(height2):
-                return f"{character1} is taller than {character2}!"
+                result = f"{character1} is taller than {character2}!"
+                st.success(result)
 
 
             elif int(height2) > int(height1):
-                return f"{character2} is taller than {character2}!"
-
+                result = f"{character2} is taller than {character2}!"
+                st.success(result)
 
             elif int(height1) == int(height2):
-                return f"{character1} and {character2} are the same height!"
-
+                result = f"{character1} and {character2} are the same height!"
+                
 
             else:
-                return "We can't tell :("
+                result= "We can't tell :("
+                st.info(result)
+            storage(result)
 def storage(result):
     prompt = f"Write a Star Wars themed story about the comparison: {result} Make it exciting!"
     response = model.generate_content(prompt)
