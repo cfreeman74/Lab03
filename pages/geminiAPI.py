@@ -80,6 +80,45 @@ if st.button("Find out who's taller ->"):
     # Initialize the model
 
 st.markdown("""
+<div class="Star-Wars-Chatbot">
+  <h2>Star Wars Chatbot:</h2>
+  <p>Get answers from a Star Wars expert. Ask them all your questiosn!</p>
+
+  <form>
+    <input type="text" placeholder="Enter your question here:">
+    <button type="submit">▶</button>
+  </form>
+</div>
+""", unsafe_allow_html=True)
+
+
+chat = model.start_chat(
+history=[
+    {"role": "user", "parts": "Hello"},
+    {"role": "model", "parts": "Great to meet you. What would you like to know?"},
+    ]
+)
+
+# Create the Streamlit app
+def main():
+    st.header("Star Wars Chatbot")
+
+    user_input = st.text_input("Enter your message:")
+
+    if user_input:
+        response = chat.send_message(user_input)
+        st.text_area("AI Response:", response.text)
+
+if __name__ == "__main__":
+    main()
+
+
+#st.write(chatbot())
+
+
+
+
+st.markdown("""
 <div class="post-game-conference">
   <h2>Post-Game Press Conference:</h2>
   <p>The local Pokémon master was in attendance for the battle. Ask him any questions about the fight!</p>
@@ -116,7 +155,7 @@ history=[
 st.markdown(
         """
         <div style="text-align: center; font-size: 32px; font-weight: bold; margin-bottom: 20px;">
-            Post-Game Press Conference
+            Star Wars Chatbot
         </div>
         <div style="text-align: center; font-size: 18px; color: gray;">
             The local Pokémon master was in attendance for the battle. Ask him any questions about the fight!
