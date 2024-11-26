@@ -53,7 +53,7 @@ def taller():
             else:
                 result= "We can't tell :("
                 st.info(result)
-            storage(result)
+            return storage(result)
 def storage(result):
     prompt = f"Write a Star Wars themed story about the comparison: {result} Make it exciting!"
     response = model.generate_content(prompt)
