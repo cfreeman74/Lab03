@@ -52,7 +52,7 @@ def storage(result):
     response = model.generate_content(prompt)
     st.write(response.text)
 
-st.header("Who's taller?")
+st.header("Which Star Wars character is taller?")
 st.write("Put in the characters of your chioice.")
 st.write("---")
 
