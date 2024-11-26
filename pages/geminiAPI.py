@@ -64,23 +64,44 @@ if st.button("Find out who's taller ->"):
 
 message = st.text_input("Enter something: ")
 
-def chatbot(message):
-    model = genai.GenerativeModel("gemini-1.5-flash")
-    chat = model.start_chat(
-        history=[
-            {"role": "user", "parts": "Hello"},
-            {"role": "model", "parts": "Great to meet you. What would you like to know?"},
-        ]
-    )
-    aiResponse = chat.send_message(model.generate_content(message))
-    #response = chat.send_message("I have 2 dogs in my house.")
-    st.write(response.text)
+def chatbot():
+    # model = genai.GenerativeModel("gemini-1.5-flash")
+    # chat = model.start_chat(
+    #     history=[
+    #         {"role": "user", "parts": "Hello"},
+    #         {"role": "model", "parts": "Great to meet you. What would you like to know?"},
+    #     ]
+    # )
+    # aiResponse = chat.send_message(model.generate_content(message))
+    # #response = chat.send_message("I have 2 dogs in my house.")
+    # st.write(response.text)
 
     # st.title("Interactive Chatbot")
     # st.write("Start a conversation with the AI!")
     
     # Initialize the model
 
+    model = genai("gemini-1.5-flash")
+    chat = model.start_chat(
+    history=[
+        {"role": "user", "parts": "Hello"},
+        {"role": "model", "parts": "Great to meet you. What would you like to know?"},
+    ]
+)
 
-st.write(chatbot(message))
+# Create the Streamlit app
+def main():
+    st.title("Gemini AI Chatbot")
+
+    user_input = st.text_input("Enter your message:")
+
+    if user_input:
+        response = chat.send_message(user_input)
+        st.text_area("AI Response:", response.text)
+
+if __name__ == "__main__":
+    main()
+
+
+#st.write(chatbot())
 
