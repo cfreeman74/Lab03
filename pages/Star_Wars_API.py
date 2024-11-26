@@ -1,14 +1,12 @@
 import requests
 import json
 import streamlit as st
-def features():
-    
 
-    hairColor = st.text_input("What is your hair color? ")
-    eyeColor = st.text_input("What is your eye color? ")
-    gender = st.text_input("What is your gender? ")
-   
+hairColor = st.text_input("What is your hair color? ")
+eyeColor = st.text_input("What is your eye color? ")
+gender = st.text_input("What is your gender? ")
 
+def features(hairColor, eyeColor, gender):
    #hairColor
     i = 1
     person1 = " "
@@ -107,4 +105,4 @@ def features():
     
     
     
-st.write(features())
+st.write(features(hairColor,eyeColor,gender))
