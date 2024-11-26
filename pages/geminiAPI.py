@@ -59,4 +59,4 @@ character1 = st.text_input("Type in a starwars character")
 character2 = st.text_input("Type in another starwars character")
 
 if st.button("Enter something"):
-    taller()
+    st.write(taller())
