@@ -2,7 +2,7 @@ import requests
 import json
 import streamlit as st
 
-st.header("Find Your Star Wars Lookalike")
+st.title("Find Your Star Wars Lookalike")
 st.write("Input your characteristics and get back a Star Wars character that looks like you!")
 st.write("---")
 
