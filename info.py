@@ -3,7 +3,7 @@
 
 #CHANGE BELOW
 profile_picture = "Images/Netrapfp.png"
-about_me = "I'm NetraSomasundaram a freshman majoring in CompE at Georgia tech"
+about_me = "I'm Netra Somasundaram a freshman majoring in CompE at Georgia tech"
 
 
 #CHANGE BELOW (OPTIONAL)
