@@ -34,22 +34,21 @@ def taller():
 
 
     while i < 100:
-       movie_number = i
-       base_url = "https://swapi.dev/api/people/"
-       full_url = f"{base_url}{movie_number}/"
-       response = requests.get(full_url)
-       data = response.json()
+        movie_number = i
+        base_url = "https://swapi.dev/api/people/"
+        full_url = f"{base_url}{movie_number}/"
+        response = requests.get(full_url)
+        data = response.json()
 
 
-       if data["name"] == character1:
-           height1 = data["height"]
+        if data["name"] == character1:
+            height1 = data["height"]
       
+        elif data["name"] == character2:
+            height2 = data["height"]
       
-       elif data["name"] == character2:
-           height2 = data["height"]
-      
-       else:
-           i+=1
+        else:
+            i+=1
 
 
 
@@ -57,21 +56,19 @@ def taller():
 
 
 
-
-   if height1 > height2:
-       return f"{character1} is taller!"
-
-
-   elif height2 > height1:
-       return f"{character2} is taller!"
+    if height1 > height2:
+        return f"{character1} is taller!"
 
 
-   elif height1 == height2:
-       return f"{character1} and {character2} are the same height!"
+    elif height2 > height1:
+        return f"{character2} is taller!"
 
 
-   else:
-       return "We can't tell :("
+    elif height1 == height2:
+        return f"{character1} and {character2} are the same height!"
 
+
+    else:
+        return "We can't tell :("
 
 st.write(taller())
