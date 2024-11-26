@@ -63,7 +63,6 @@ if st.button("Find out who's taller ->"):
     st.write(taller())
 
 
-def chatbot():
     # model = genai.GenerativeModel("gemini-1.5-flash")
     # chat = model.start_chat(
     #     history=[
