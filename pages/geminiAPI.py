@@ -53,6 +53,7 @@ def storage(result):
     st.write(response.text)
 
 def chatbot():
+    model = genai.GenerativeModel("gemini-1.5-flash")
     chat = model.start_chat(
         history=[
             {"role": "user", "parts": "Hello"},
@@ -72,6 +73,6 @@ st.write("---")
 character1 = st.text_input("Type in a starwars character")
 character2 = st.text_input("Type in another starwars character")
 
-if st.button("Enter something"):
+if st.button("Find out who's taller"):
     st.write(taller())
 
