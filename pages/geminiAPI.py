@@ -22,18 +22,18 @@ def taller():
 
 
 
-   character1 = st.text_input("Type in a starwars character")
-   character2 = st.text_input("Type in another starwars character")
+    character1 = st.text_input("Type in a starwars character")
+    character2 = st.text_input("Type in another starwars character")
 
 
-   i = 1
-   height1 = "0"
-   height2 = "0"
+    i = 1
+    height1 = "0"
+    height2 = "0"
   
   
 
 
-   while i < 100:
+    while i < 100:
        movie_number = i
        base_url = "https://swapi.dev/api/people/"
        full_url = f"{base_url}{movie_number}/"
