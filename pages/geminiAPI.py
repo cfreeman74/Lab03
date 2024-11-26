@@ -53,17 +53,44 @@ def storage(result):
     st.write(response.text)
 
 def chatbot():
-    model = genai.GenerativeModel("gemini-1.5-flash")
-    chat = model.start_chat(
-        history=[
+    # model = genai.GenerativeModel("gemini-1.5-flash")
+    # chat = model.start_chat(
+    #     history=[
+    #         {"role": "user", "parts": "Hello"},
+    #         {"role": "model", "parts": "Great to meet you. What would you like to know?"},
+    #     ]
+    # )
+    # response = chat.send_message("I have 2 dogs in my house.")
+    # st.write(response.text)
+
+    st.title("Interactive Chatbot")
+    st.write("Start a conversation with the AI!")
+
+    # Chat interface
+    if "history" not in st.session_state:
+        st.session_state.history = [
             {"role": "user", "parts": "Hello"},
             {"role": "model", "parts": "Great to meet you. What would you like to know?"},
         ]
-    )
-    response = chat.send_message("I have 2 dogs in my house.")
-    st.write(response.text)
-    response = chat.send_message("How many paws are in my house?")
-    st.write(response.text)
+
+    for msg in st.session_state.history:
+        if msg["role"] == "user":
+            st.text_input("You:", value=msg["parts"], key=f"user_{msg['parts']}", disabled=True)
+        else:
+            st.text_area("Bot:", value=msg["parts"], key=f"bot_{msg['parts']}", disabled=True)
+
+    user_input = st.text_input("Your message:")
+    if st.button("Send"):
+        if user_input:
+            # Append user input to history
+            st.session_state.history.append({"role": "user", "parts": user_input})
+
+            # Generate a response
+            response = chat.send_message(user_input)
+            st.session_state.history.append({"role": "model", "parts": response.text})
+
+            # Clear input box
+            st.experimental_rerun()
 
 
 st.header("Who's taller?")
