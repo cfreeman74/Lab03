@@ -52,6 +52,16 @@ def storage(result):
     response = model.generate_content(prompt)
     st.write(response.text)
 
+st.header("Who's taller?")
+st.write("Put in the characters of your chioice.")
+st.write("---")
+
+character1 = st.text_input("Type in a Star Wars character")
+character2 = st.text_input("Type in another Star Wars character")
+
+if st.button("Find out who's taller ->"):
+    st.write(taller())
+
 def chatbot():
     # model = genai.GenerativeModel("gemini-1.5-flash")
     # chat = model.start_chat(
@@ -66,14 +76,4 @@ def chatbot():
     st.title("Interactive Chatbot")
     st.write("Start a conversation with the AI!")
 st.write(chatbot)
-
-st.header("Who's taller?")
-st.write("Put in the characters of your chioice.")
-st.write("---")
-
-character1 = st.text_input("Type in a Star Wars character")
-character2 = st.text_input("Type in another Star Wars character")
-
-if st.button("Find out who's taller ->"):
-    st.write(taller())
 
