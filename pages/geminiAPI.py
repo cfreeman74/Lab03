@@ -100,6 +100,9 @@ def main():
         response = chat.send_message(user_input)
         st.text_area("AI Response:", response.text)
 
+        chat.history.append({"role": "user", "parts": user_input})
+        chat.history.append({"role": "model", "parts": response.text})
+
 if __name__ == "__main__":
     main()
 
