@@ -13,10 +13,17 @@ genai.configure(api_key=key)
 model = genai.GenerativeModel("gemini-1.5-flash")
 
 
-<form>
-<input type="text" placeholder="Enter your question here:">
-<button type="submit">-></button>
-</form>
+st.markdown("""
+<div class="post-game-conference">
+  <h2>Post-Game Press Conference:</h2>
+  <p>The local Pokémon master was in attendance for the battle. Ask him any questions about the fight!</p>
+
+  <form>
+    <input type="text" placeholder="Enter your question here:">
+    <button type="submit">▶</button>
+  </form>
+</div>
+""", unsafe_allow_html=True)
 
 
 
