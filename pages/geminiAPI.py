@@ -63,17 +63,17 @@ if st.button("Find out who's taller ->"):
     st.write(taller())
 
 def chatbot():
-    # model = genai.GenerativeModel("gemini-1.5-flash")
-    # chat = model.start_chat(
-    #     history=[
-    #         {"role": "user", "parts": "Hello"},
-    #         {"role": "model", "parts": "Great to meet you. What would you like to know?"},
-    #     ]
-    # )
-    # response = chat.send_message("I have 2 dogs in my house.")
-    # st.write(response.text)
+    model = genai.GenerativeModel("gemini-1.5-flash")
+    chat = model.start_chat(
+        history=[
+            {"role": "user", "parts": "Hello"},
+            {"role": "model", "parts": "Great to meet you. What would you like to know?"},
+        ]
+    )
+    response = chat.send_message("I have 2 dogs in my house.")
+    st.write(response.text)
 
-    st.title("Interactive Chatbot")
-    st.write("Start a conversation with the AI!")
+    # st.title("Interactive Chatbot")
+    # st.write("Start a conversation with the AI!")
 st.write(chatbot)
 
