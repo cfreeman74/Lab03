@@ -2,7 +2,7 @@
 #This File will contain the information to be displayed in your portfolio
 
 #CHANGE BELOW
-profile_picture = "Images\jayceprofile.jpg"
+profile_picture = "Images/jayceprofile.jpg"
 about_me = "I am Jayce Talis, an inventor. I am the De-Facto Head of the Council of Piltover and the co-founder of Hextech."
 
 
