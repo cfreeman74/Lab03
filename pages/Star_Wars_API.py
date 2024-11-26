@@ -107,4 +107,4 @@ def features():
     
     
     
-print(features())
+st.write(features())
