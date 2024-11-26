@@ -25,50 +25,35 @@ def taller():
     character1 = st.text_input("Type in a starwars character")
     character2 = st.text_input("Type in another starwars character")
 
-
-    i = 1
-    height1 = "0"
-    height2 = "0"
-  
-  
-
-
-    while i < 100:
-        movie_number = i
+    if character1 and character2:
         base_url = "https://swapi.dev/api/people/"
-        full_url = f"{base_url}{movie_number}"
-        response = requests.get(full_url)
-        data = response.json()
+        height1 = None
+        height2 = None
+        for id in range(1,83):
+            response.request.get(f"{base_url}{id}/")
+            data = response.json()
+            if data["name"].lower() == character1.lower():
+                height1 = data["height"]
+            if data["name"].lower() == character2.lower():
+                height2 = data["height"]
+
+            if height1 and height2:
+                break
+        if height1 and height2:
+
+            if int(height1) > int(height2):
+                return f"{character1} is taller!"
 
 
-        if data["name"] == character1:
-            height1 = data["height"]
-      
-        elif data["name"] == character2:
-            height2 = data["height"]
-      
-        else:
-            i+=1
+            elif int(height2) > int(height1):
+                return f"{character2} is taller!"
 
 
+            elif int(height1) == int(height2):
+                return f"{character1} and {character2} are the same height!"
 
 
-
-
-
-    if height1 > height2:
-        return f"{character1} is taller!"
-
-
-    elif height2 > height1:
-        return f"{character2} is taller!"
-
-
-    elif height1 == height2:
-        return f"{character1} and {character2} are the same height!"
-
-
-    else:
-        return "We can't tell :("
+            else:
+                return "We can't tell :("
 
 st.write(taller())
