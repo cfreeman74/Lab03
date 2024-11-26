@@ -14,13 +14,6 @@ model = genai.GenerativeModel("gemini-1.5-flash")
 
 
 def taller():
-
-    
-
-
-
-    
-
     if character1 and character2:
         base_url = "https://swapi.dev/api/people/"
         height1 = None
@@ -60,7 +53,6 @@ def storage(result):
     st.write(response.text)
 
 def chatbot():
-    model = genai.GenerativeModel("gemini-1.5-flash")
     chat = model.start_chat(
         history=[
             {"role": "user", "parts": "Hello"},
@@ -68,9 +60,9 @@ def chatbot():
         ]
     )
     response = chat.send_message("I have 2 dogs in my house.")
-    print(response.text)
+    st.write(response.text)
     response = chat.send_message("How many paws are in my house?")
-    print(response.text)
+    st.write(response.text)
 
 
 st.header("Who's taller?")
