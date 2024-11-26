@@ -2,7 +2,7 @@
 #This File will contain the information to be displayed in your portfolio
 
 #CHANGE BELOW
-profile_picture = "images/Netrapfp.png"
+profile_picture = "Images/Netrapfp.png"
 about_me = "I'm NetraSomasundaram a freshman majoring in CompE at Georgia tech"
 
 
