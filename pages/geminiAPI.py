@@ -13,6 +13,12 @@ genai.configure(api_key=key)
 model = genai.GenerativeModel("gemini-1.5-flash")
 
 
+<form>
+    <input type="text" placeholder="Enter your question here:">
+    <button type="submit">▶</button>
+</form>
+
+
 def taller():
     if character1 and character2:
         base_url = "https://swapi.dev/api/people/"
