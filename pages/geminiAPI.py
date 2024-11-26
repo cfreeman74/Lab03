@@ -36,7 +36,7 @@ def taller():
     while i < 100:
         movie_number = i
         base_url = "https://swapi.dev/api/people/"
-        full_url = f"{base_url}{movie_number}/"
+        full_url = f"{base_url}{movie_number}"
         response = requests.get(full_url)
         data = response.json()
 
