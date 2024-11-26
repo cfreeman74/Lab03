@@ -65,41 +65,15 @@ def chatbot():
 
     st.title("Interactive Chatbot")
     st.write("Start a conversation with the AI!")
-
-    # Chat interface
-    if "history" not in st.session_state:
-        st.session_state.history = [
-            {"role": "user", "parts": "Hello"},
-            {"role": "model", "parts": "Great to meet you. What would you like to know?"},
-        ]
-
-    for msg in st.session_state.history:
-        if msg["role"] == "user":
-            st.text_input("You:", value=msg["parts"], key=f"user_{msg['parts']}", disabled=True)
-        else:
-            st.text_area("Bot:", value=msg["parts"], key=f"bot_{msg['parts']}", disabled=True)
-
-    user_input = st.text_input("Your message:")
-    if st.button("Send"):
-        if user_input:
-            # Append user input to history
-            st.session_state.history.append({"role": "user", "parts": user_input})
-
-            # Generate a response
-            response = chat.send_message(user_input)
-            st.session_state.history.append({"role": "model", "parts": response.text})
-
-            # Clear input box
-            st.experimental_rerun()
-
+st.write(chatbot)
 
 st.header("Who's taller?")
 st.write("Put in the characters of your chioice.")
 st.write("---")
 
-character1 = st.text_input("Type in a starwars character")
-character2 = st.text_input("Type in another starwars character")
+character1 = st.text_input("Type in a Star Wars character")
+character2 = st.text_input("Type in another Star Wars character")
 
-if st.button("Find out who's taller"):
+if st.button("Find out who's taller ->"):
     st.write(taller())
 
