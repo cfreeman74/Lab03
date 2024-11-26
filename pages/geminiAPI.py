@@ -62,6 +62,7 @@ character2 = st.text_input("Type in another Star Wars character")
 if st.button("Find out who's taller ->"):
     st.write(taller())
 
+
 def chatbot():
     # model = genai.GenerativeModel("gemini-1.5-flash")
     # chat = model.start_chat(
@@ -96,5 +97,5 @@ def chatbot():
         # Display the chatbot's response
         print(f"Chatbot: {response.text}")
 
-#st.write(chatbot)
+st.write(chatbot())
 
