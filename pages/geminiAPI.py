@@ -56,8 +56,8 @@ st.title("Which Star Wars character is taller?")
 st.write("Put in the characters of your chioice.")
 st.write("---")
 
-character1 = st.text_input("Type in a Star Wars character")
-character2 = st.text_input("Type in another Star Wars character")
+character1 = st.text_input("Enter the first Star Wars character: ")
+character2 = st.text_input("Enter the second Star Wars character: ")
 
 if st.button("Find out who's taller ->"):
     st.write(taller())
