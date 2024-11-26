@@ -79,17 +79,7 @@ if st.button("Find out who's taller ->"):
     
     # Initialize the model
 
-st.markdown("""
-<div class="Star-Wars-Chatbot">
-  <h2>Star Wars Chatbot:</h2>
-  <p>Get answers from a Star Wars expert. Ask them all your questiosn!</p>
 
-  <form>
-    <input type="text" placeholder="Enter your question here:">
-    <button type="submit">▶</button>
-  </form>
-</div>
-""", unsafe_allow_html=True)
 
 
 chat = model.start_chat(
@@ -101,6 +91,7 @@ history=[
 
 # Create the Streamlit app
 def main():
+
     st.header("Star Wars Chatbot")
 
     user_input = st.text_input("Enter your message:")
