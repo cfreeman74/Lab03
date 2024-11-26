@@ -110,17 +110,60 @@ history=[
 )
 
 # Create the Streamlit app
-def main():
-    st.header("Star Wars Chatbot")
 
-    user_input = st.text_input("Enter your message:")
+ st.set_page_config(page_title="Pokémon Battle Chat", layout="centered")
+
+    # Page header
+    st.markdown(
+        """
+        <div style="text-align: center; font-size: 32px; font-weight: bold; margin-bottom: 20px;">
+            Post-Game Press Conference
+        </div>
+        <div style="text-align: center; font-size: 18px; color: gray;">
+            The local Pokémon master was in attendance for the battle. Ask him any questions about the fight!
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+    # Chat interface
+    user_input = st.text_input(
+        "Enter your question here:",
+        placeholder="Type your question...",
+        label_visibility="hidden"
+    )
 
     if user_input:
+        # Get response from AI
         response = chat.send_message(user_input)
-        st.text_area("AI Response:", response.text)
+
+        # Display chat history
+        st.markdown(
+            f"""
+            <div style="margin: 20px 0; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
+                <b>Pokémon Trainer</b>: {user_input}
+                <br><br>
+                <b>Pokémon Trainer</b>: {response.text}
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
+
 
 if __name__ == "__main__":
     main()
+
+# def main():
+#     st.header("Star Wars Chatbot")
+
+#     user_input = st.text_input("Enter your question:")
+
+#     if user_input:
+#         response = chat.send_message(user_input)
+#         st.text_area("AI Response:", response.text)
+
+# if __name__ == "__main__":
+#     main()
 
 
 #st.write(chatbot())
